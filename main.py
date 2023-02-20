@@ -215,14 +215,16 @@ async def on_message_delete(message):
     snipe_message_content = message.content
     snipe_message_author = message.author.id
     snipe_message_id = message.id
-    if(snipe_message_author != 728263722598137989):
+    var = 0 ## replace 0 with the user id you want, will make message sniper not work when that user deleted a message
+    if(snipe_message_author != var):
         await message.channel.send("sniped: " + "`" + snipe_message_content + "`" + "\nFrom: " +   f'<@!{snipe_message_author}>')
     
 @client.event
 async def on_message_edit(message_before, message_after):
     author = message_before.author.id
     channel = message_before.channel
-    if(author != 728263722598137989):
+    var = 0 ## replace 0 with the user id you want, will make message sniper not work when that user ediits a message
+    if(author != var):
       await channel.send(f"""Pre-edit: `{message_before.content}`\nPost-edit: `{message_after.content}`\nAuthor: <@!{message_before.author.id}>""")
 
 
