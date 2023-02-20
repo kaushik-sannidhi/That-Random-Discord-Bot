@@ -7,7 +7,7 @@ import requests
 
 client = commands.Bot(command_prefix = "trdb ")
 client.remove_command('help')
-TOKEN = "NTMzNzA0MTExODUwNTIwNTk3.G1mgtj.6irK_GwyjWOF6PJYRm4MQhIzhkeSiZLRV6KsGw"
+TOKEN = "" ## input your bot token here
 @client.event
 async def on_ready():
     print('We have logged in ')
